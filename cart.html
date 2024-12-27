@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>购物车 - 烟花商城</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 顶部标题 -->
+        <div class="page-header">
+            购物车
+        </div>
+
+        <!-- 购物车列表 -->
+        <div class="cart-container" id="cartContainer">
+            <!-- 购物车内容将通过JavaScript动态生成 -->
+        </div>
+
+        <!-- 底部结算栏 -->
+        <div class="cart-footer" id="cartFooter">
+            <div class="select-all">
+                <input type="checkbox" id="selectAll">
+                <label for="selectAll">全选</label>
+            </div>
+            <div class="checkout-area">
+                <div class="total-info">
+                    <span>合计：</span>
+                    <span class="total-price">¥0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="showOrderConfirm()">结算</button>
+            </div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="bottom-nav">
+            <div class="nav-item" onclick="location.href='index.html'">
+                <i class="nav-icon">📦</i>
+                <span>全部商品</span>
+            </div>
+            <div class="nav-item active">
+                <i class="nav-icon">🛒</i>
+                <span>购物车</span>
+            </div>
+            <div class="nav-item" onclick="location.href='profile.html'">
+                <i class="nav-icon">👤</i>
+                <span>我的</span>
+            </div>
+        </div>
+
+        <!-- 订单确认弹窗 -->
+        <div class="order-confirm" id="orderConfirm" style="display: none;">
+            <div class="order-confirm-content">
+                <h3>确认订单</h3>
+                <div class="order-items" id="orderItems">
+                    <!-- 订单商品列表将通过JavaScript动态生成 -->
+                </div>
+                <div class="order-total">
+                    <span>总计：</span>
+                    <span class="confirm-total-price">¥0.00</span>
+                </div>
+                <div class="order-actions">
+                    <button class="cancel-btn" onclick="hideOrderConfirm()">取消</button>
+                    <button class="confirm-btn" onclick="submitOrder()">确认下单</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

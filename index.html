@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>烟花商城</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 搜索栏 -->
+        <div class="search-bar">
+            <div class="search-input-wrap">
+                <i class="search-icon">🔍</i>
+                <input type="text" placeholder="请输入商品名称" class="search-input">
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="main-container">
+            <!-- 左侧分类菜单 -->
+            <div class="category-menu">
+                <div class="category-item active">全部</div>
+                <div class="category-item">小产品</div>
+                <div class="category-item">礼花类</div>
+                <div class="category-item">雷</div>
+                <div class="category-item">蜘</div>
+                <div class="category-item">火箭类</div>
+                <div class="category-item">其它</div>
+            </div>
+
+            <!-- 右侧商品列表 -->
+            <div class="product-list" id="productList">
+                <!-- 商品列表将通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <i class="nav-icon">📦</i>
+                <span>全部商品</span>
+            </div>
+            <div class="nav-item" onclick="location.href='cart.html'">
+                <i class="nav-icon">🛒</i>
+                <span>购物车</span>
+            </div>
+            <div class="nav-item" onclick="location.href='profile.html'">
+                <i class="nav-icon">👤</i>
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
